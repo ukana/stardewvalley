@@ -3,7 +3,7 @@ $DNESNI_DATUM = (Get-Date -Format FileDate)
 
 if ($NAPOSLEDY_ZALOHOVANO -lt $DNESNI_DATUM) {
  Get-Date -Format FileDate | Out-File -FilePath .\last_backup.log
- Copy-Item -Path $env:APPDATA\StardewValley\* -Recurse -Force
+ Copy-Item -Path $env:APPDATA\HelloGames\NMS\* -Recurse -Force
  git add .
  git commit -m "new backup"
  git push
@@ -12,4 +12,4 @@ if ($NAPOSLEDY_ZALOHOVANO -lt $DNESNI_DATUM) {
 else {
  Write-Host "Already backed up today."
 }
-& '.\Stardew Valley.url'
+& '.\No Mans Sky.url'
