@@ -8,4 +8,4 @@ git commit -m "new backup"
 git push
 Write-Host "Backed up."
 
-& '.\No Mans Sky.url'
+#& '.\No Mans Sky.url'
